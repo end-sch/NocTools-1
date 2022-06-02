@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <title>Radius</title>
+        <link rel="icon" href="img/favicon.ico" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+        <meta http-equiv="Content-Type" content="text/html" charset="utf-8">
+        <script src="../libs/jquery-3.4.1.min.js"></script>
+        <script src="js/javascript.js"></script>
+        <link href="../libs/bootstrap-4.3.1/css/bootstrap.min.css" rel="stylesheet" />
+        <script src="../libs/bootstrap-4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" />
+    </head>
+    <div class="conteiner-fluid mt-2 mb-2 p-2">
+		<body>
+
+			<div class="row justify-content-around">
+				<div class="col-md-12 d-flex justify-content-end">
+					<button id="refresh" class="btn-success rounded-circle"><i class="fas fa-sync-alt"></i></button>
+				</div>
+			</div>
+
+
+			<div class="row justify-content-around mt-3">
+				<div class="col-md-5 align-self-start align-items-center text-center border border-info">
+					<h5>Requisições Radius ao Banco de Dados</h5><br>
+					<font size="2">
+						<table id="tabela" class="table table-sm table-striped table-hover">
+							<thead>
+								<th><b>Intervalo</b></th>
+								<th><b>Aceitas</b></th>
+								<th><b>Rejeitadas</b></th>
+								<th><b>Interims</b></th>
+							</thead>
+							<tbody>
+								<tr>
+									<td><b>1 Minuto</b></td>
+									<td id="acpt1"></td>
+									<td id="rjct1"></td>
+									<td id="int1"></td>
+								</tr>
+								<tr>
+									<td><b>5 Minutos</b></td>
+									<td id="acpt5"></td>
+									<td id="rjct5"></td>
+									<td id="int5"></td>
+								</tr>
+								<tr>
+									<td><b>30 Minutos</b></td>
+									<td id="acpt30"></td>
+									<td id="rjct30"></td>
+									<td id="int30"></td>
+								</tr>
+							</tbody>
+						</table>
+					</font>
+				</div>
+
+				<div class="col-md-3 align-self-start align-items-center text-center border border-info">
+					<h5>Sessões duplicadas</h5><br>
+				<font size="2">
+					<table id="duplicadas" class="table table-sm table-striped table-hover">
+					</table>
+				</font>
+				</div>
+
+
+				<div class="col-md-3 align-self-start align-items-center text-center border border-info">
+					<h5>Total de autenticações Hoje</h5><br>
+				<font size="2">
+					<table id="auth" class="table table-sm table-striped table-hover">
+					</table>
+				</font>
+				</div>
+
+
+			</div>
+			<div class="row justify-content-around mt-3">
+
+				<div class="col-md-6 align-self-start align-items-center text-center border border-info">
+					<h5>Total de falhas de login PPPoE por usuário (Últimos 30 minutos)</h5><br>
+					<font size="2">
+						<table id="reject" class="table table-sm table-striped table-hover">
+						</table>
+					</font>
+				</div>
+				
+			</div>
+
+		</body>
+		<footer>
+        <div class="row fixed-bottom" style="background-color:#f2f2f2">
+                <div class="col-md-12 text-right">
+                    <small>Noc - março/2020 - v1.1</small>
+                </div>
+            </div>
+        </footer>
+	</div>
+</html>
